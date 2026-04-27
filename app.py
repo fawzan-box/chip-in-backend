@@ -341,7 +341,7 @@ def chipin_webhook():
                 },
                 items=data['purchase']['metadata']['shopify_payload']['items'],
                 email_marketing_consent_state=data["client"]["state"],
-                coupon_code=data['purchase']['metadata']['shopify_payload']['coupon_code'],
+                coupon_code=data['purchase']['metadata']['shopify_payload'].get('coupon_code'),
                 metafields=extra,
             )
 
