@@ -522,6 +522,7 @@ def create_shopify_order(
     logging.info(f"items response: {items}")
 
     #Apply coupon code if any
+    discount_codes = []
     if coupon_code:
         coupon_is_valid, discount_value, value_type = validate_shopify_coupon(
             coupon_code
